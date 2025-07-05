@@ -4,12 +4,45 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        green: '#98CA3F',
+        green: '#0ae98a',
         blue: '#121F3D',
-        darkblue: '#0A1122',
-        skyblue: '#33B1FF',
+        darkblue: '#13161c',
+        skyblue: '#0ae98a',
+      },
+      fontFamily: {
+        sans: ['IBM Plex Sans', 'sans-serif'],
+      },
+      animation: {
+        'fade-in-scale': 'fadeInScale 1s ease-out forwards',
+        'fade-in-right': 'fadeInRight 1s ease-out forwards',
+        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+      },
+      keyframes: {
+        fadeInScale: {
+          '0%': { opacity: '0', transform: 'scale(1.6)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        fadeInRight: {
+          '0%': { opacity: '0', transform: 'translateX(20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(32px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+      animationDelay: {
+        '300': '300ms',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.animate-delay-300': {
+          'animation-delay': '300ms',
+        },
+      });
+    },
+  ],
 };
