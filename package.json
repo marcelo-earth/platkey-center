@@ -15,12 +15,12 @@
   "dependencies": {
     "@astrojs/react": "^2.0.2",
     "@astrojs/tailwind": "^3.0.1",
+    "@fontsource-variable/ibm-plex-sans": "^5.2.6",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "astro": "^2.0.6",
     "astro-i18next": "^1.0.0-beta.17",
     "classnames": "^2.3.2",
-    "framer-motion": "^9.0.1",
     "lottie-react": "^2.3.1",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
