@@ -20,7 +20,7 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <meta property="og:image" content="https://platkey.dev/cover.webp" />
   </head>
-  <body>
+  <body class="dark:[color-scheme:dark]">
     <slot />
   </body>
 </html>
@@ -76,10 +76,6 @@ const { title, description } = Astro.props;
   }
 
   .platkey-logo {
-    box-shadow: 0 0 10rem 1rem #33b1ff;
-    -webkit-box-shadow: 0 0 10rem 1rem #33b1ff;
-    -moz-box-shadow: 0 0 10rem 1rem #33b1ff;
-    border-radius: 25px;
   }
 
   @keyframes lightup {
