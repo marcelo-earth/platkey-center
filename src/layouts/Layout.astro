@@ -19,17 +19,17 @@ const { title, description } = Astro.props;
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta property="og:image" content="https://platkey.dev/cover.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   </head>
-  <body class="dark:[color-scheme:dark]">
+  <body class="dark:[color-scheme:dark] font-sans">
     <slot />
   </body>
 </html>
 <style is:global>
   html {
     scroll-behavior: smooth;
-  }
-  html {
-    font-family: system-ui, sans-serif;
   }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
@@ -67,32 +67,12 @@ const { title, description } = Astro.props;
 
   .platkey-interface-container:hover h3 {
     opacity: 1;
-    transform: scale(1.05);
   }
 
   .platkey-interface-container:hover .platkey-interface {
-    transform: scale(1.05);
     opacity: 0.6;
   }
 
   .platkey-logo {
-  }
-
-  @keyframes lightup {
-    0% {
-      box-shadow: 0 0 10rem 1px #33b1ff;
-      -webkit-box-shadow: 0 0 10rem 1px #33b1ff;
-      -moz-box-shadow: 0 0 10rem 1px #33b1ff;
-    }
-    50% {
-      box-shadow: 0 0 0rem 1px #33b1ff;
-      -webkit-box-shadow: 0 0 0rem 1px #33b1ff;
-      -moz-box-shadow: 0 0 0rem 1px #33b1ff;
-    }
-    100% {
-      box-shadow: 0 0 10rem 1px #33b1ff;
-      -webkit-box-shadow: 0 0 10rem 1px #33b1ff;
-      -moz-box-shadow: 0 0 10rem 1px #33b1ff;
-    }
   }
 </style>
