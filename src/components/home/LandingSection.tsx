@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
-
-import { useLottie } from 'lottie-react';
-import classnames from 'classnames';
 import { useInView } from 'react-intersection-observer';
-import { motion, useAnimation } from 'framer-motion';
+import classnames from 'classnames';
+
+// Lazy load heavy components
+const LazyAnimationPlayer = lazy(() => import('./LazyAnimationPlayer'));
+
+// Images - keep these for immediate loading of visible content
 import platkeyssh from '../../assets/ssh.webp';
 import platkeysave from '../../assets/save.webp';
 import platkeyinterface from '../../assets/interface.webp';
-import searchAnimation from '../../assets/search-animation.json';
-import greenboardAnimation from '../../assets/greenboard-animation.json';
-
-const extensionVariant = {
-  visible: { opacity: 1, scale: 1 },
-  hidden: { opacity: 0, scale: 0 },
-};
 
 // TODO: Update this using the demo, maybe I don't need to declare a children prop
 type KeyProps = {
@@ -38,33 +33,20 @@ type PlatKeyUIProps = {
 };
 
 const PlatKeyUI = (props: PlatKeyUIProps) => {
-  const [interfaceRef, inView] = useInView();
-  const control = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      control.start('visible');
-    }
-  }, [control, inView]);
   return (
-    <motion.div
-      ref={interfaceRef}
-      className="flex justify-center items-center platkey-interface-container"
-      variants={extensionVariant}
-      initial="hidden"
-      animate={control}
-    >
+    <div className="flex justify-center items-center platkey-interface-container">
       <img
         src={platkeyinterface}
         alt="Interface of PlatKey"
         className="w-10/12 lg:w-[24rem] platkey-interface tracking-widest"
+        loading="lazy"
       />
       <div className="absolute flex flex-col justify-center items-center">
         <h3 className="text-white font-bold	text-3xl md:text-[5rem] lg:text-[7rem] drop-shadow-xl">
           {props.message}
         </h3>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -104,6 +86,16 @@ const PlatKeyOption = ({
   );
 };
 
+// Animation placeholder component
+const AnimationPlaceholder = ({ height = "300px" }: { height?: string }) => (
+  <div 
+    className="flex items-center justify-center bg-gray-800 rounded-lg animate-pulse"
+    style={{ height }}
+  >
+    <div className="text-white text-lg">Loading animation...</div>
+  </div>
+);
+
 function LandingSection() {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -122,19 +114,29 @@ function LandingSection() {
     'flex flex-col justify-center items-center min-h-auto';
   const [keyPressed, setKeyPressed] = useState<string>('');
 
-  const searchAnimationOptions = {
-    animationData: searchAnimation,
-    loop: true,
-  };
+  // Intersection observer hooks for lazy loading
+  const { ref: greenboardRef, inView: greenboardInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
-  const greenboardAnimationOptions = {
-    animationData: greenboardAnimation,
-    loop: true,
-  };
+  const { ref: searchRef, inView: searchInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
-  const searchAnimationElement = useLottie(searchAnimationOptions);
-  const searchGreenboardElement = useLottie(greenboardAnimationOptions);
+  const { ref: saveImageRef, inView: saveImageInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const { ref: sshImageRef, inView: sshImageInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   const { t } = useTranslation('translation');
+  
   return (
     <section className="min-h-screen bg-darkblue px-4 flex justify-center">
       <div className="flex flex-col gap-y-[16vh] py-[16vh] lg:pt-[2vh] lg:pb-[26vh]">
@@ -213,7 +215,7 @@ function LandingSection() {
             </p>
           </div>
         </div>
-        <div className={featureClassNames}>
+        <div className={featureClassNames} ref={greenboardRef}>
           <h3 className="text-green font-semibold text-3xl lg:text-4xl text-center">
             {t('feature.greenboard.title')}
           </h3>
@@ -225,10 +227,18 @@ function LandingSection() {
               </span>
               . {t('feature.greenboard.instruction.01')}
             </p>
-            {searchGreenboardElement.View}
+            <Suspense fallback={<AnimationPlaceholder height="400px" />}>
+              {greenboardInView && (
+                <LazyAnimationPlayer 
+                  animationType="greenboard"
+                  width="100%"
+                  height="400px"
+                />
+              )}
+            </Suspense>
           </div>
         </div>
-        <div className={featureClassNames}>
+        <div className={featureClassNames} ref={saveImageRef}>
           <h3 className="text-green font-semibold text-3xl lg:text-4xl text-center">
             {t('feature.save.title')}
           </h3>
@@ -237,13 +247,16 @@ function LandingSection() {
               {t('feature.save.message')}
             </p>
           </div>
-          <img
-            src={platkeysave}
-            alt={t('feature.save.title') + ''}
-            className="rounded-lg lg:w-[60rem] hover:scale-105 transition duration-300"
-          />
+          {saveImageInView && (
+            <img
+              src={platkeysave}
+              alt={t('feature.save.title') + ''}
+              className="rounded-lg lg:w-[60rem] hover:scale-105 transition duration-300"
+              loading="lazy"
+            />
+          )}
         </div>
-        <div className={featureClassNames}>
+        <div className={featureClassNames} ref={searchRef}>
           <h3 className="text-green font-semibold text-3xl lg:text-4xl text-center">
             {t('feature.spotlight.title')}
           </h3>
@@ -251,7 +264,15 @@ function LandingSection() {
             <p className="text-white inline text-2xl text-center">
               {t('feature.spotlight.message')}
             </p>
-            {searchAnimationElement.View}
+            <Suspense fallback={<AnimationPlaceholder height="300px" />}>
+              {searchInView && (
+                <LazyAnimationPlayer 
+                  animationType="search"
+                  width="100%"
+                  height="300px"
+                />
+              )}
+            </Suspense>
             <p className="text-white inline text-2xl text-center">
               {t('feature.spotlight.instruction.01')} <Key>Ctrl</Key>+
               <Key>K</Key> {t('feature.spotlight.instruction.02')}{' '}
@@ -294,7 +315,7 @@ function LandingSection() {
             </p>
           </div>
         </div>
-        <div className={featureClassNames}>
+        <div className={featureClassNames} ref={sshImageRef}>
           <h3 className="text-green font-semibold text-3xl lg:text-4xl text-center">
             {t('feature.mode.title')}
           </h3>
@@ -303,11 +324,14 @@ function LandingSection() {
               {t('feature.mode.message')}
             </p>
           </div>
-          <img
-            src={platkeyssh}
-            alt={t('feature.mode.title') + ''}
-            className="rounded-lg lg:w-[60rem] shadow-2xl shadow-black"
-          />
+          {sshImageInView && (
+            <img
+              src={platkeyssh}
+              alt={t('feature.mode.title') + ''}
+              className="rounded-lg lg:w-[60rem] shadow-2xl shadow-black"
+              loading="lazy"
+            />
+          )}
         </div>
       </div>
     </section>
