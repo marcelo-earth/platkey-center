@@ -6,7 +6,17 @@ import Footer from '../components/Footer';
 changeLanguage('es');
 ---
 
-<Layout title="Share PlatKey" description="Share Platkey">
+<Layout 
+  title="Comparte PlatKey - Extensión de Navegador para Platzi | Feedback y Soporte"
+  description="¿Te gusta PlatKey? Comparte nuestra extensión de navegador para Platzi, danos tu opinión o reporta problemas. Tu feedback nos ayuda a mejorar."
+  keywords="compartir PlatKey, feedback, soporte, extensión navegador, Platzi, opiniones, reporte problemas"
+  canonical="https://platkey.astronware.com/love"
+  alternateUrls={[
+    { hreflang: 'es', href: 'https://platkey.astronware.com/love' },
+    { hreflang: 'en', href: 'https://platkey.astronware.com/en/love' },
+    { hreflang: 'x-default', href: 'https://platkey.astronware.com/love' }
+  ]}
+>
   <main>
     <div
       class="min-h-screen w-full bg-gradient-to-t from-black to-darkblue flex flex-col justify-center gap-y-16 text-center"
@@ -20,7 +30,7 @@ changeLanguage('es');
         </p>
         <div>
           <a
-            href="https://twitter.com/intent/tweet?text=Me encanta esta extensión&url=https://platkey.dev&hashtags=platzi,chrome"
+            href="https://twitter.com/intent/tweet?text=Me encanta esta extensión&url=https://platkey.astronware.com&hashtags=platzi,chrome"
             target="_blank"
             rel="noopener noreferrer"
             class="bg-skyblue active:ring text-darkblue font-bold py-2 px-6 rounded-lg text-xl"

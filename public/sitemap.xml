@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Spanish Homepage (Main) -->
+  <url>
+    <loc>https://platkey.astronware.com/</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://platkey.astronware.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://platkey.astronware.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://platkey.astronware.com/"/>
+  </url>
+  
+  <!-- English Homepage -->
+  <url>
+    <loc>https://platkey.astronware.com/en/</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://platkey.astronware.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://platkey.astronware.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://platkey.astronware.com/"/>
+  </url>
+  
+  <!-- Spanish Privacy Policy -->
+  <url>
+    <loc>https://platkey.astronware.com/privacy</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://platkey.astronware.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://platkey.astronware.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://platkey.astronware.com/privacy"/>
+  </url>
+  
+  <!-- English Privacy Policy -->
+  <url>
+    <loc>https://platkey.astronware.com/en/privacy</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://platkey.astronware.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://platkey.astronware.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://platkey.astronware.com/privacy"/>
+  </url>
+  
+  <!-- Spanish Love Page -->
+  <url>
+    <loc>https://platkey.astronware.com/love</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://platkey.astronware.com/love"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://platkey.astronware.com/en/love"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://platkey.astronware.com/love"/>
+  </url>
+  
+  <!-- English Love Page -->
+  <url>
+    <loc>https://platkey.astronware.com/en/love</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://platkey.astronware.com/love"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://platkey.astronware.com/en/love"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://platkey.astronware.com/love"/>
+  </url>
+  
+</urlset> 
