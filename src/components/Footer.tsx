@@ -7,19 +7,19 @@ const Footer = () => {
       <div className="flex flex-row flex-wrap justify-center gap-x-[2rem] gap-y-[2rem]">
         <a
           className="text-green hover:underline"
-          href="https://github.com/360macky/platkey"
+          href="https://github.com/marcelo-earth/platkey"
         >
           {t('footer.githubrepository')}
         </a>
         <a
           className="text-green hover:underline"
-          href="https://github.com/360macky/platkey/issues"
+          href="https://github.com/marcelo-earth/platkey/issues"
         >
           {t('footer.issues')}
         </a>
         <a
           className="text-green hover:underline"
-          href="https://github.com/360macky/platkey#-contributing"
+          href="https://github.com/marcelo-earth/platkey#-contributing"
         >
           {t('footer.contributions')}
         </a>
