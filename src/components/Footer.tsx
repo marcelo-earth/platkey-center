@@ -23,6 +23,9 @@ const Footer = () => {
         >
           {t('footer.contributions')}
         </a>
+        <a className="text-emerald-700 dark:text-green hover:underline" href="./#faq">
+          {t('footer.faq')}
+        </a>
         <a className="text-emerald-700 dark:text-green hover:underline" href="./privacy">
           {t('footer.privacy')}
         </a>
@@ -30,6 +33,11 @@ const Footer = () => {
       <div className="flex flex-row p-4 justify-center">
         <p className="text-blue dark:text-white text-center max-w-[42rem]">
           {t('footer.disclaimer')}
+        </p>
+      </div>
+      <div className="flex flex-row justify-center">
+        <p className="text-emerald-700 dark:text-green text-sm text-center">
+          {t('footer.copyright')}
         </p>
       </div>
     </footer>

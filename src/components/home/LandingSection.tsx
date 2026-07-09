@@ -42,9 +42,9 @@ const PlatKeyUI = (props: PlatKeyUIProps) => {
         loading="lazy"
       />
       <div className="absolute flex flex-col justify-center items-center">
-        <h3 className="text-white font-bold	text-3xl md:text-[5rem] lg:text-[7rem] drop-shadow-xl">
+        <p className="text-white font-bold text-3xl md:text-[5rem] lg:text-[7rem] drop-shadow-xl">
           {props.message}
-        </h3>
+        </p>
       </div>
     </div>
   );

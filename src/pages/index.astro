@@ -3,10 +3,42 @@ import { changeLanguage } from 'i18next';
 import Layout from '../layouts/Layout.astro';
 import HeroSection from '../components/home/HeroSection';
 import LandingSection from '../components/home/LandingSection';
+import FaqSection from '../components/home/FaqSection.astro';
 import Footer from '../components/Footer';
 import '@fontsource-variable/ibm-plex-sans';
 
 changeLanguage('es');
+
+const faqItems = [
+  {
+    question: '¿Qué es PlatKey?',
+    answer:
+      'PlatKey es una extensión de navegador de código abierto que añade atajos de teclado, un buscador aumentado, un modo SSH y otras herramientas de productividad a tu experiencia en Platzi.',
+  },
+  {
+    question: '¿PlatKey es gratis?',
+    answer: 'Sí, PlatKey es completamente gratuito y de código abierto.',
+  },
+  {
+    question: '¿En qué navegadores funciona PlatKey?',
+    answer: 'PlatKey funciona en Google Chrome, Microsoft Edge, Brave y Safari.',
+  },
+  {
+    question: '¿PlatKey recopila mis datos personales?',
+    answer:
+      'No. PlatKey no recopila ninguna información personal, tal como se detalla en su política de privacidad.',
+  },
+  {
+    question: '¿PlatKey es un producto oficial de Platzi?',
+    answer:
+      'No, PlatKey es un proyecto independiente de código abierto creado por la comunidad y no está afiliado oficialmente a Platzi.',
+  },
+  {
+    question: '¿Cómo instalo PlatKey?',
+    answer:
+      'Haz clic en el botón Instalar en la parte superior de esta página y sigue las instrucciones para tu navegador.',
+  },
+];
 ---
 
 <Layout
@@ -23,6 +55,7 @@ changeLanguage('es');
   <main>
     <HeroSection client:visible />
     <LandingSection client:visible />
+    <FaqSection title="Preguntas frecuentes" items={faqItems} />
     <Footer />
   </main>
 </Layout>

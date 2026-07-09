@@ -5,7 +5,7 @@
   <!-- Spanish Homepage (Main) -->
   <url>
     <loc>https://platkey.astronware.com/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://platkey.astronware.com/"/>
@@ -16,7 +16,7 @@
   <!-- English Homepage -->
   <url>
     <loc>https://platkey.astronware.com/en/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://platkey.astronware.com/"/>
@@ -27,7 +27,7 @@
   <!-- Spanish Privacy Policy -->
   <url>
     <loc>https://platkey.astronware.com/privacy</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://platkey.astronware.com/privacy"/>
@@ -38,7 +38,7 @@
   <!-- English Privacy Policy -->
   <url>
     <loc>https://platkey.astronware.com/en/privacy</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://platkey.astronware.com/privacy"/>
@@ -49,7 +49,7 @@
   <!-- Spanish Love Page -->
   <url>
     <loc>https://platkey.astronware.com/love</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://platkey.astronware.com/love"/>
@@ -60,7 +60,7 @@
   <!-- English Love Page -->
   <url>
     <loc>https://platkey.astronware.com/en/love</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://platkey.astronware.com/love"/>

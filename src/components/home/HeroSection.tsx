@@ -69,25 +69,25 @@ function HeroSection() {
                   className="bg-darkblue text-white cursor-pointer hover:bg-skyblue/30 focus:ring-4 focus:outline-none focus:ring-skyblue/50 rounded-lg border border-skyblue px-5 py-2.5 focus:z-10 md:w-[50%] w-full transition"
                   href={CHROME_STORE_LINK}
                 >
-                  <h2 className="text-xl font-bold">
+                  <span className="text-xl font-bold">
                     <span className="sr-only">
                       {t('hero.message.install.on')}
                     </span>
                     Chrome{' '}
                     <span className="font-light">({t('or')} Brave, Edge)</span>
-                  </h2>
+                  </span>
                 </a>
                 <a
                   target="_blank"
                   className="bg-darkblue text-white cursor-pointer hover:bg-skyblue/30 focus:ring-4 focus:outline-none focus:ring-skyblue/50 rounded-lg border border-skyblue px-5 py-2.5 focus:z-10 md:w-[50%] w-full transition"
                   href={APP_STORE_LINK}
                 >
-                  <h2 className="text-xl font-bold">
+                  <span className="text-xl font-bold">
                     <span className="sr-only">
                       {t('hero.message.install.on')}
                     </span>
                     Apple Safari
-                  </h2>
+                  </span>
                 </a>
               </div>
             </div>
@@ -110,9 +110,9 @@ function HeroSection() {
                 {t('hero.message.underline')}
               </span>
             </h1>
-            <h3 className="text-emerald-700 dark:text-green text-4xl font-semibold lg:pt-3 text-center lg:text-left pt-4">
+            <h2 className="text-emerald-700 dark:text-green text-4xl font-semibold lg:pt-3 text-center lg:text-left pt-4">
               PlatKey <span className="font-light hidden sm:inline">3.0</span>
-            </h3>
+            </h2>
           </div>
         </div>
         <div className="flex flex-col w-full px-4 gap-y-4 lg:flex-row-reverse lg:gap-x-4 lg:justify-center lg:pt-8 animate-fade-in-up animate-delay-300">
