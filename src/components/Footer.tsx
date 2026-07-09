@@ -1,7 +1,13 @@
 import React from 'react';
-import { t } from 'i18next';
+import { getTranslator } from '../lib/i18n';
 
-const Footer = () => {
+interface FooterProps {
+  lang?: 'es' | 'en';
+}
+
+const Footer = ({ lang = 'es' }: FooterProps) => {
+  const t = getTranslator(lang);
+
   return (
     <footer className="bg-white dark:bg-black p-4">
       <div className="flex flex-row flex-wrap justify-center gap-x-[2rem] gap-y-[2rem]">

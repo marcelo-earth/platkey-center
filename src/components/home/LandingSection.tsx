@@ -1,7 +1,7 @@
 import React, { useEffect, useState, lazy, Suspense } from 'react';
-import { useTranslation } from 'react-i18next';
 import { useInView } from 'react-intersection-observer';
 import classnames from 'classnames';
+import { getTranslator } from '../../lib/i18n';
 
 // Lazy load heavy components
 const LazyAnimationPlayer = lazy(() => import('./LazyAnimationPlayer'));
@@ -96,7 +96,11 @@ const AnimationPlaceholder = ({ height = "300px" }: { height?: string }) => (
   </div>
 );
 
-function LandingSection() {
+interface LandingSectionProps {
+  lang?: 'es' | 'en';
+}
+
+function LandingSection({ lang = 'es' }: LandingSectionProps) {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       const key = event.key.toLowerCase();
@@ -135,7 +139,7 @@ function LandingSection() {
     threshold: 0.1,
   });
 
-  const { t } = useTranslation('translation');
+  const t = getTranslator(lang);
 
   return (
     <section className="min-h-screen bg-white dark:bg-darkblue px-4 flex justify-center">

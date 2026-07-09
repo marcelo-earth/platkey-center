@@ -5,6 +5,7 @@
   "hero.message.normal": "Your keyboard will learn to do ",
   "hero.message.underline": "much more",
   "hero.message.install": "Install",
+  "hero.message.install.on": "Install on",
   "hero.message.howitworks": "How PlatKey works?",
   "hero.message.available": "Compatible with",
   "hero.install.instruction": "That's great. Choose your browser to install PlatKey",

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { getTranslator } from '../../lib/i18n';
 
 import classnames from 'classnames';
 import logo from '../../assets/platkey-logo.svg';
@@ -13,8 +13,12 @@ const APP_STORE_LINK = 'https://apps.apple.com/app/platkey/id1659587636 ';
 const CHROME_STORE_LINK =
   'https://chrome.google.com/webstore/detail/platkey/bdjedpeffgjikndcihipemgdinpcmpcf';
 
-function HeroSection() {
-  const { t } = useTranslation('translation');
+interface HeroSectionProps {
+  lang?: 'es' | 'en';
+}
+
+function HeroSection({ lang = 'es' }: HeroSectionProps) {
+  const t = getTranslator(lang);
 
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
 
