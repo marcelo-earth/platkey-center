@@ -36,10 +36,10 @@ function HeroSection() {
         )}
       >
         <div className="relative w-full h-full max-w-3xl md:h-auto">
-          <div className="relative bg-black rounded-xl border-darkblue border-2">
+          <div className="relative bg-white dark:bg-black rounded-xl border-slate-200 dark:border-darkblue border-2">
             <button
               type="button"
-              className="absolute top-3 right-2.5 text-gray-400 bg-transparent active:text-skyblue hover:text-white rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+              className="absolute top-3 right-2.5 text-gray-500 dark:text-gray-400 bg-transparent active:text-skyblue hover:text-blue dark:hover:text-white rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
               data-modal-hide="popup-modal"
               onClick={handleInstallModal}
             >
@@ -59,10 +59,10 @@ function HeroSection() {
               <span className="sr-only">Close modal</span>
             </button>
             <div className="p-6 text-center flex justify-center flex-col items-center">
-              <h3 className="mt-2 text-xl font-normal text-white">
+              <h3 className="mt-2 text-xl font-normal text-blue dark:text-white">
                 {t('hero.install.instruction')}:
               </h3>
-              <img src={platkeyinstalled} className="h-72" aria-hidden="true" />
+              <img src={platkeyinstalled.src} className="h-72" aria-hidden="true" />
               <div className="flex flex-col md:flex-row gap-x-4 w-full gap-y-4">
                 <a
                   target="_blank"
@@ -94,23 +94,23 @@ function HeroSection() {
           </div>
         </div>
       </div>
-      <section className="min-h-screen w-full bg-gradient-to-b from-black to-darkblue flex flex-col items-center gap-y-5 justify-center">
+      <section className="min-h-screen w-full bg-gradient-to-b from-white to-slate-100 dark:from-black dark:to-darkblue flex flex-col items-center gap-y-5 justify-center">
         <div className="flex flex-col items-center lg:flex-row lg:gap-x-8">
           <div className="animate-fade-in-scale">
             <img
-              src={logo}
+              src={logo.src}
               alt="Platkey logo"
               className="w-44 transition active:translate-y-1 cursor-pointer platkey-logo"
             />
           </div>
           <div className="flex flex-col px-4 animate-fade-in-right">
-            <h1 className="text-white text-4xl text-center font-bold lg:text-left lg:w-[32rem] lg:text-5xl">
+            <h1 className="text-blue dark:text-white text-4xl text-center font-bold lg:text-left lg:w-[32rem] lg:text-5xl">
               {t('hero.message.normal')}
               <span className="underline decoration-green decoration-3 underline-offset-4">
                 {t('hero.message.underline')}
               </span>
             </h1>
-            <h3 className="text-green text-4xl font-semibold lg:pt-3 text-center lg:text-left pt-4">
+            <h3 className="text-emerald-700 dark:text-green text-4xl font-semibold lg:pt-3 text-center lg:text-left pt-4">
               PlatKey <span className="font-light hidden sm:inline">3.0</span>
             </h3>
           </div>
@@ -131,25 +131,25 @@ function HeroSection() {
           </a>
         </div>
         <div className="hidden lg:flex lg:flex-col items-center pt-6 gap-y-5">
-          <p className="text-white text-xl">{t('hero.message.available')}</p>
+          <p className="text-blue dark:text-white text-xl">{t('hero.message.available')}</p>
           <div className="flex gap-x-8">
             <img
-              src={chrome}
+              src={chrome.src}
               alt="Google Chrome"
               className="w-12 transition hover:scale-110"
             />
             <img
-              src={edge}
+              src={edge.src}
               alt="Microsoft Edge"
               className="w-12 transition hover:scale-110"
             />
             <img
-              src={brave}
+              src={brave.src}
               alt="Brave"
               className="w-12 transition hover:scale-110"
             />
             <img
-              src={safari}
+              src={safari.src}
               alt="Apple Safari"
               className="w-12 transition hover:scale-110"
             />

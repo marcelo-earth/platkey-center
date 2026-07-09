@@ -3,32 +3,32 @@ import { t } from 'i18next';
 
 const Footer = () => {
   return (
-    <footer className="bg-black p-4">
+    <footer className="bg-white dark:bg-black p-4">
       <div className="flex flex-row flex-wrap justify-center gap-x-[2rem] gap-y-[2rem]">
         <a
-          className="text-green hover:underline"
+          className="text-emerald-700 dark:text-green hover:underline"
           href="https://github.com/marcelo-earth/platkey"
         >
           {t('footer.githubrepository')}
         </a>
         <a
-          className="text-green hover:underline"
+          className="text-emerald-700 dark:text-green hover:underline"
           href="https://github.com/marcelo-earth/platkey/issues"
         >
           {t('footer.issues')}
         </a>
         <a
-          className="text-green hover:underline"
+          className="text-emerald-700 dark:text-green hover:underline"
           href="https://github.com/marcelo-earth/platkey#-contributing"
         >
           {t('footer.contributions')}
         </a>
-        <a className="text-green hover:underline" href="./privacy">
+        <a className="text-emerald-700 dark:text-green hover:underline" href="./privacy">
           {t('footer.privacy')}
         </a>
       </div>
       <div className="flex flex-row p-4 justify-center">
-        <p className="text-white text-center max-w-[42rem]">
+        <p className="text-blue dark:text-white text-center max-w-[42rem]">
           {t('footer.disclaimer')}
         </p>
       </div>

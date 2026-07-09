@@ -49,8 +49,8 @@ const LazyAnimationPlayer: React.FC<LazyAnimationPlayerProps> = ({
 
   if (isLoading) {
     return (
-      <div 
-        className="flex items-center justify-center bg-gray-800 rounded-lg animate-pulse"
+      <div
+        className="flex items-center justify-center rounded-lg animate-pulse"
         style={{ width, height }}
       >
         <div className="text-white text-lg">Loading animation...</div>
@@ -60,8 +60,8 @@ const LazyAnimationPlayer: React.FC<LazyAnimationPlayerProps> = ({
 
   if (error || !animationData) {
     return (
-      <div 
-        className="flex items-center justify-center bg-gray-700 rounded-lg border border-gray-600"
+      <div
+        className="flex items-center justify-center rounded-lg border border-white/10"
         style={{ width, height }}
       >
         <div className="text-gray-300 text-lg">Animation unavailable</div>

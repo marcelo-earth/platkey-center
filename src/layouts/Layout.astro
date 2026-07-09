@@ -142,7 +142,8 @@ const hreflangTags = alternateUrls.length > 0 ? alternateUrls : [
     <meta name="twitter:image:alt" content={`${title} - Preview Image`} />
     
     <!-- Additional SEO Meta Tags -->
-    <meta name="theme-color" content="#0F172A" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0F172A" media="(prefers-color-scheme: dark)" />
     <meta name="msapplication-TileColor" content="#0F172A" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -167,7 +168,7 @@ const hreflangTags = alternateUrls.length > 0 ? alternateUrls : [
     <link rel="preload" href="/cover.webp" as="image" />
     <link rel="preload" href="/interface.webp" as="image" />
   </head>
-  <body class="dark:[color-scheme:dark] font-sans">
+  <body class="bg-white text-blue dark:bg-black dark:text-white [color-scheme:light_dark] font-sans">
     <slot />
   </body>
 </html>
