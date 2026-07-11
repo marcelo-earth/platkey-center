@@ -37,7 +37,9 @@ const PlatKeyUI = (props: PlatKeyUIProps) => {
     <div className="flex justify-center items-center platkey-interface-container rounded-3xl bg-darkblue p-8 lg:p-12">
       <img
         src={platkeyinterface.src}
-        alt="Interface of PlatKey"
+        width={platkeyinterface.width}
+        height={platkeyinterface.height}
+        alt="Interface of Platzi Extension"
         className="w-10/12 lg:w-[24rem] platkey-interface tracking-widest"
         loading="lazy"
       />
@@ -257,6 +259,8 @@ function LandingSection({ lang = 'es' }: LandingSectionProps) {
             <div className="rounded-lg bg-darkblue p-2 lg:w-[60rem]">
               <img
                 src={platkeysave.src}
+                width={platkeysave.width}
+                height={platkeysave.height}
                 alt={t('feature.save.title') + ''}
                 className="rounded-md w-full hover:scale-105 transition duration-300"
                 loading="lazy"
@@ -338,6 +342,8 @@ function LandingSection({ lang = 'es' }: LandingSectionProps) {
             <div className="rounded-lg bg-darkblue p-2 lg:w-[60rem] shadow-2xl shadow-black/40">
               <img
                 src={platkeyssh.src}
+                width={platkeyssh.width}
+                height={platkeyssh.height}
                 alt={t('feature.mode.title') + ''}
                 className="rounded-md w-full"
                 loading="lazy"

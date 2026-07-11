@@ -6,10 +6,10 @@
   "hero.message.underline": "mucho más",
   "hero.message.install": "Instalar",
   "hero.message.install.on": "Instalar en",
-  "hero.message.howitworks": "¿Cómo funciona PlatKey?",
+  "hero.message.howitworks": "¿Cómo funciona Platzi Extension?",
   "hero.message.available": "Compatible con",
-  "hero.install.instruction": "Genial. Elige un navegador para instalar PlatKey",
-  "hero.description.01": "PlatKey es una herramienta para tu navegador que te ayuda a estudiar en Platzi",
+  "hero.install.instruction": "Genial. Elige un navegador para instalar Platzi Extension",
+  "hero.description.01": "Platzi Extension es una herramienta para tu navegador que te ayuda a estudiar en Platzi",
   "hero.description.02": "Cuando la instales, podrás usar las siguientes características:",
   "feature.shortcuts.title": "Completa los exámenes y quizzes sin usar el mouse",
   "feature.shortcuts.message": "Activa la opción Shortcuts.",
@@ -47,5 +47,5 @@
   "footer.privacy": "Política de Privacidad",
   "footer.disclaimer": "Todas las marcas comerciales, logotipos y nombres comerciales son propiedad de sus respectivos dueños. Todos los nombres de empresas, productos y servicios utilizados en este sitio web tienen únicamente fines de identificación. El uso de estos nombres, marcas registradas y marcas no implica aprobación.",
   "footer.faq": "Preguntas frecuentes",
-  "footer.copyright": "© 2022–2026 PlatKey. Todos los derechos reservados."
+  "footer.copyright": "© 2022–2026 Platzi Extension. Todos los derechos reservados."
 }

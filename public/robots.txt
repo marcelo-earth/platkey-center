@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://platkey.astronware.com/sitemap.xml
+Sitemap: https://platkey.astronware.com/sitemap-index.xml
 
 # Crawl-delay
 Crawl-delay: 1
