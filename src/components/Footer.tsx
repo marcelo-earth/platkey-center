@@ -29,10 +29,16 @@ const Footer = ({ lang = 'es' }: FooterProps) => {
         >
           {t('footer.contributions')}
         </a>
-        <a className="text-emerald-700 dark:text-green hover:underline" href="./#faq">
+        <a
+          className="text-emerald-700 dark:text-green hover:underline"
+          href={lang === 'en' ? '/en/#faq' : '/#faq'}
+        >
           {t('footer.faq')}
         </a>
-        <a className="text-emerald-700 dark:text-green hover:underline" href="./privacy">
+        <a
+          className="text-emerald-700 dark:text-green hover:underline"
+          href={lang === 'en' ? '/en/privacy/' : '/privacy/'}
+        >
           {t('footer.privacy')}
         </a>
       </div>
