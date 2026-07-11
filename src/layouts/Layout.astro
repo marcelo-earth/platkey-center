@@ -16,8 +16,8 @@ export interface Props {
 
 const {
   title,
-  description = "PlatKey is a powerful browser extension that enhances your Platzi learning experience with keyboard shortcuts, interactive features, and productivity tools for better online education.",
-  keywords = "PlatKey, Platzi, browser extension, Chrome extension, Safari extension, keyboard shortcuts, online learning, education tools, productivity, study tools",
+  description = "Platzi Extension is a powerful browser extension that enhances your Platzi learning experience with keyboard shortcuts, interactive features, and productivity tools for better online education.",
+  keywords = "Platzi Extension, Platzi, browser extension, Chrome extension, Safari extension, keyboard shortcuts, online learning, education tools, productivity, study tools",
   image = "https://platkey.astronware.com/cover.webp",
   canonical,
   alternateUrls = [],
@@ -27,15 +27,15 @@ const {
 } = Astro.props;
 
 const currentUrl = canonical || Astro.url.href;
-const siteName = "PlatKey";
+const siteName = "Platzi Extension";
 const twitterHandle = "@marcelo_earth";
 
 // Default structured data for the web extension
 const defaultStructuredData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "PlatKey",
-  "alternateName": "PlatKey Browser Extension",
+  "name": "Platzi Extension",
+  "alternateName": "Platzi Browser Extension",
   "description": "A browser extension that enhances your Platzi learning experience with keyboard shortcuts, interactive features, and productivity tools.",
   "applicationCategory": "EducationalApplication",
   "operatingSystem": "Web Browser",
@@ -51,7 +51,7 @@ const defaultStructuredData = {
   },
   "publisher": {
     "@type": "Organization",
-    "name": "PlatKey",
+    "name": "Platzi Extension",
     "url": "https://platkey.astronware.com"
   },
   "offers": {

@@ -37,7 +37,7 @@ const PlatKeyUI = (props: PlatKeyUIProps) => {
     <div className="flex justify-center items-center platkey-interface-container rounded-3xl bg-darkblue p-8 lg:p-12">
       <img
         src={platkeyinterface.src}
-        alt="Interface of PlatKey"
+        alt="Interface of Platzi Extension"
         className="w-10/12 lg:w-[24rem] platkey-interface tracking-widest"
         loading="lazy"
       />

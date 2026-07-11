@@ -103,7 +103,7 @@ function HeroSection({ lang = 'es' }: HeroSectionProps) {
           <div className="animate-fade-in-scale">
             <img
               src={logo.src}
-              alt="Platkey logo"
+              alt="Platzi Extension logo"
               className="w-44 transition active:translate-y-1 cursor-pointer platkey-logo"
             />
           </div>
@@ -115,7 +115,7 @@ function HeroSection({ lang = 'es' }: HeroSectionProps) {
               </span>
             </h1>
             <h2 className="text-emerald-700 dark:text-green text-4xl font-semibold lg:pt-3 text-center lg:text-left pt-4">
-              PlatKey <span className="font-light hidden sm:inline">3.0</span>
+              Platzi Extension <span className="font-light hidden sm:inline">3.0</span>
             </h2>
           </div>
         </div>
