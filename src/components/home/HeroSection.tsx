@@ -3,11 +3,11 @@ import { getTranslator } from '../../lib/i18n';
 
 import classnames from 'classnames';
 import logo from '../../assets/platkey-logo.svg';
-import chrome from '../../assets/chrome.png';
-import edge from '../../assets/edge.png';
-import brave from '../../assets/brave.png';
-import safari from '../../assets/safari.png';
-import platkeyinstalled from '../../assets/platkey-installed.png';
+import chrome from '../../assets/chrome.webp';
+import edge from '../../assets/edge.webp';
+import brave from '../../assets/brave.webp';
+import safari from '../../assets/safari.webp';
+import platkeyinstalled from '../../assets/platkey-installed.webp';
 
 const APP_STORE_LINK = 'https://apps.apple.com/app/platkey/id1659587636 ';
 const CHROME_STORE_LINK =
