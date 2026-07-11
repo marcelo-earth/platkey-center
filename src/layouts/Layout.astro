@@ -163,10 +163,6 @@ const hreflangTags = alternateUrls.length > 0 ? alternateUrls : [
     
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(finalStructuredData)}></script>
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="/cover.webp" as="image" />
-    <link rel="preload" href="/interface.webp" as="image" />
   </head>
   <body class="bg-white text-blue dark:bg-black dark:text-white [color-scheme:light_dark] font-sans">
     <slot />
