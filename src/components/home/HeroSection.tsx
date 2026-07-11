@@ -33,6 +33,8 @@ function HeroSection({ lang = 'es' }: HeroSectionProps) {
           <div className="animate-fade-in-scale">
             <img
               src={logo.src}
+              width={logo.width}
+              height={logo.height}
               alt="Platzi Extension logo"
               className="w-44 transition active:translate-y-1 cursor-pointer platkey-logo"
             />
@@ -69,21 +71,29 @@ function HeroSection({ lang = 'es' }: HeroSectionProps) {
           <div className="flex gap-x-8">
             <img
               src={chrome.src}
+              width={chrome.width}
+              height={chrome.height}
               alt="Google Chrome"
               className="w-12 transition hover:scale-110"
             />
             <img
               src={edge.src}
+              width={edge.width}
+              height={edge.height}
               alt="Microsoft Edge"
               className="w-12 transition hover:scale-110"
             />
             <img
               src={brave.src}
+              width={brave.width}
+              height={brave.height}
               alt="Brave"
               className="w-12 transition hover:scale-110"
             />
             <img
               src={safari.src}
+              width={safari.width}
+              height={safari.height}
               alt="Apple Safari"
               className="w-12 transition hover:scale-110"
             />
@@ -128,7 +138,13 @@ function HeroSection({ lang = 'es' }: HeroSectionProps) {
               <h3 className="mt-2 text-xl font-normal text-blue dark:text-white">
                 {t('hero.install.instruction')}:
               </h3>
-              <img src={platkeyinstalled.src} className="h-72" aria-hidden="true" />
+              <img
+                src={platkeyinstalled.src}
+                width={platkeyinstalled.width}
+                height={platkeyinstalled.height}
+                className="h-72"
+                aria-hidden="true"
+              />
               <div className="flex flex-col md:flex-row gap-x-4 w-full gap-y-4">
                 <a
                   target="_blank"
